@@ -11,8 +11,8 @@ namespace JobBoard.Controllers
 {
     public class ListingsController : Controller
     {
-        [HttpPost("/listings")]
-        public ActionResult Index()
+        [HttpPost("/dew")]
+        public ActionResult Results()
         {
             Listings newListings = new Listings();
             newListings.SetTitle(Request.Form["job-title"]);
