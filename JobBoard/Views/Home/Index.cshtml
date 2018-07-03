@@ -8,7 +8,7 @@
   <body>
     <div class="container">
       <div class="jumbotron"><h1>Job Board Listings</h1></div>
-      <form action="/listings">
+      <form action="/listings" method="post">
         <div class="form-group">
           <label for="job-title">Job Title</label>
           <input type="text" name="job-title" id="job-title" class="form-control">
@@ -31,6 +31,7 @@
         </div>
         <button type="submit" name="job-submit" id="job-submit" class="btn btn-info">Submit New Job</button>
       </form>
+        
     </div>
   </body>
 </html>

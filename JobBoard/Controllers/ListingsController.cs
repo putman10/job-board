@@ -11,15 +11,15 @@ namespace JobBoard.Controllers
 {
     public class ListingsController : Controller
     {
-        [HttpGet("/listings")]
-        public IActionResult Index()
+        [HttpPost("/listings")]
+        public ActionResult Index()
         {
             Listings newListings = new Listings();
-            newListings.SetTitle(Request.Query["job-title"]);
-            newListings.SetDescription(Request.Query["job-description"]);
-            newListings.SetContactName(Request.Query["job-contact-name"]);
-            newListings.SetContactEmail(Request.Query["job-contact-email"]);
-            newListings.SetContactPhone(Request.Query["job-contact-phone"]);
+            newListings.SetTitle(Request.Form["job-title"]);
+            newListings.SetDescription(Request.Form["job-description"]);
+            newListings.SetContactName(Request.Form["job-contact-name"]);
+            newListings.SetContactEmail(Request.Form["job-contact-email"]);
+            newListings.SetContactPhone(Request.Form["job-contact-phone"]);
             newListings.UpdateList();
             return View(newListings.GetList());
         }

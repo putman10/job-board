@@ -12,9 +12,9 @@ namespace JobBoard.Controllers
     public class HomeController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        [HttpGet("/")]
+        public ActionResult Index()
         {
-            
             return View();
         }
     }
